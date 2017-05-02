@@ -1,0 +1,11 @@
+!!!
+%html
+  %head>
+    %title KonturDemo
+    %meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0")
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+
+  %body
+    = yield

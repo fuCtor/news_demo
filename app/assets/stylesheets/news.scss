@@ -1,0 +1,113 @@
+// Place all the styles related to the news controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Verdana;
+  font-size: 10px;
+}
+
+.news_container {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+
+  h1 {
+    color: #7f7f7f;
+    font-size: 6rem;
+    font-weight: 800;
+    margin-top: -7rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+.new_news {
+  margin-top: -180px;
+}
+
+.form-row {
+  width: 100%;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.form-control {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  position: relative;
+}
+
+.col-80 {
+  width: 80%;
+}
+
+.col-20 {
+  width: 20%;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.btn {
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-default {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+
+.flashes {
+  .flash {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+
+    border-left: 2px solid #555555;
+    &.flash-error {
+      border-color: #B00100;
+    }
+
+    &.flash-success {
+      border-color: #01B000;
+    }
+  }
+}
