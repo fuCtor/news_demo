@@ -1,3 +1,7 @@
-#news.news_container
+#news.news_container{data: { until: news.date.to_time.iso8601 } }
   %h1.news-title= news.title
-  %p.news-annotation= news.annotation
+  %p.news-annotation
+    - if news.from_yandex?
+      = news.annotation.html_safe
+    - else
+      = news.annotation

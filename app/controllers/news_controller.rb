@@ -8,6 +8,7 @@ class NewsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @news = News.new(news_params)
     if @news.save
       NewsChannel.broadcast_to 'index', @news

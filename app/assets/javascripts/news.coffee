@@ -6,5 +6,13 @@
 #
 $ ->
   jQuery('#news_date').datetimepicker
-    format:'d.m.Y H:i'
+    format: 'd.m.Y H:i T'
     lang:'ru'
+
+  updateChecker = ->
+    date = Date.parse($('#news').data('until'))
+    if date < Date.now()
+      window.location.reload()
+
+  if $('#news').length > 0
+    setInterval(updateChecker, 10000)

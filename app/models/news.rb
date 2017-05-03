@@ -4,15 +4,17 @@ class News < ApplicationRecord
   validates_presence_of :title, :annotation
 
   def self.current_news
-    self.where('date > ?', Time.now).order('published_at asc').first
+    self.where('date > ?', Time.now).order('from_yandex asc').order('published_at desc').first
   end
 
   def check_date
     if from_yandex?
       self.date ||= Time.now + 1.day
     else
-      self.date ||= Time.now + 5.minute
+      self.published_at = Time.now
+      self.date         ||= Time.now + 5.minute
     end
-  end
 
+    self.date = self.date.getutc
+  end
 end
