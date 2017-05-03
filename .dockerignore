@@ -1,0 +1,18 @@
+.git*
+db/*.sqlite3
+db/*.sqlite3-journal
+log/*
+tmp/*
+Dockerfile
+docker-compose.yml
+public/uploads/*
+README.rdoc
+*.gz
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
+.env
+.env.production
+.bundle
+

@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  app:
+    build:
+      context: .
+      args:
+        secret: 7fb082205a15d1eb085ba541bf14d357325ab7ca3106c854cfbb92ca3211fd07f1751cdcd1064d10883a035dea07e983980d5d7df2e508e092c65b110351d0cc
+    command: bundle exec rails server --binding 0.0.0.0
+    environment:
+      - SECRET_KEY_BASE=7fb082205a15d1eb085ba541bf14d357325ab7ca3106c854cfbb92ca3211fd07f1751cdcd1064d10883a035dea07e983980d5d7df2e508e092c65b110351d0cc
+      - RACK_ENV=production
+      - RAILS_SERVE_STATIC_FILES=1
+      - PORT=3000
+    ports:
+      - 0.0.0.0:3000:3000
