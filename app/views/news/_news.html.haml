@@ -1,7 +1,9 @@
 #news.news_container{data: { until: news.date.to_time.iso8601 } }
-  %h1.news-title= news.title
+  %h1.news-title
+    = news.title
   %p.news-annotation
     - if news.from_yandex?
       = news.annotation.html_safe
     - else
       = news.annotation
+  .news-published= l news.published_at, format: "%Y %b %d %T"
