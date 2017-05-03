@@ -5,3 +5,10 @@
 docker-compose build
 docker-compose up
 ```
+
+Запуск тестов
+
+```
+bundle install
+rspec
+```
