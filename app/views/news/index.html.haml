@@ -1,2 +1,6 @@
 #progress
 = render @news if @news
+
+#add-news-wrapper
+  = link_to news_path, title: 'Add news' do
+    = fa_icon 'plus'
